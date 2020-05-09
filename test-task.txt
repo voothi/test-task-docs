@@ -1,0 +1,92 @@
+/**
+* A Swordsman has 100 hit points and use a 1 hand sword that does 5 dmg
+* A Viking has 120 hit points and use a 1 hand axe that does 6 dmg
+*/
+/ **
+* Swordsman имеет 100 очков жизни и OneHandedSword, который наносит 5 урона
+* Viking имеет 120 очков жизни и OneHandedAxe, который наносит 6 урона
+* /
+testSwordsmanVsViking
+
+/**
+* a buckler cancel all the damages of a blow one time out of two
+* a buckler is destroyed after blocking 3 blow from an axe
+*/
+/ **
+* Buckler отменяет все повреждения удара один раз из двух
+* Buckler уничтожается после блокирования 3 удара топором
+* /
+testSwordsmanWithBucklerVsVikingWithBuckler
+
+
+
+
+https://javarush.ru/groups/posts/1927-konstruktorih-bazovihkh-klassov--
+   public Cat(String brain, String heart, String tail) {
+       super(brain, heart);
+       this.tail = tail;
+   }
+
+порядок инициализации переменных и вызов конструкторов при создании нового объекта
+    статические поля superclass
+    статические поля subclass
+    
+    нестатические поля superclass
+    конструктор superclass
+    
+    нестатические поля subclass
+    конструктор subclass
+
+https://javarush.ru/groups/posts/2018-kak-rabotaet-operator-instanceof
+    Оператор instanceof проверяет именно происхождение объекта, а не переменной.
+
+    Оператор instanceof нужен для того, чтобы проверить, был ли объект, 
+    на который ссылается переменная X, создан на основе какого-либо класса Y.
+
+    Конструктор базового класса, если он есть, всегда вызывается первым при создании любого объекта. 
+    Instanceof руководствуется именно этим принципом, когда пытается определить, 
+    был ли объект А создан на основе класса Б. Если конструктор базового класса вызван, значит никаких сомнений быть не может. 
+
+https://javarush.ru/quests/lectures/questcore.level05.lecture01
+
+префиксный инкремент - вычисление->присваивание
+постфиксный инкремент - временная переменная->вычисление->присваивание временной
+var y = ++x
+x = x + 1
+var y = x
+
+var y = x++
+var y = x
+x = x + 1
+
+/**
+* an Highlander as 150 hit points and fight with a Great Sword
+* a Great Sword is a two handed sword deliver 12 damages, but can attack only 2 every 3)(attack ; attack ; no attack)
+* an armor : reduce all received damages by 3 & reduce delivered damages by one
+*/
+/ **
+* Горец за 150 очков жизни и сражается с Большим Мечом
+* Большой Меч - это двуручный меч, наносящий 12 повреждений, но может атаковать только 2 раз в 3) (атака; атака; нет атаки)
+* броня: уменьшите все полученные повреждения на 3 и уменьшите доставленные повреждения на один
+* /
+@Test
+void testArmoredSwordsmanVsViking()
+
+/**
+* a vicious Swordsman is a Swordsman that put poison on his weapon.
+* poison add 20 damages on two first blows
+* a veteran Highlander goes Berserk once his hit points are under 30% of his initial total
+* once Berserk, he doubles his damages
+*/
+* Злобный Мечник - Мечник, который наносит яд на свое оружие.
+* яд добавляет 20 урона при двух первых ударах
+* Ветеран Горец становится Берсерк, когда его очки жизни меньше 30% от его первоначального количества.
+* Однажды Берсерк, он удваивает свои убытки
+@Test
+void testViciousSwordsmanVsVeteranHighlander()
+
+
+---
+- заменить композицию агрегацией по оружию
+- перегрузку методов убрать из Swordsman
+
